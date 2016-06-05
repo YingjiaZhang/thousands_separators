@@ -33,7 +33,7 @@ function thousands_separators(num) {
 
 	part_int = deal_int(part_int);
 	
-	num = part_int +"." +part_float;
+	num = part_int + +part_float?"."+part_float:"";
 
 	return num;
 }
