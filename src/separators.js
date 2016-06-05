@@ -4,7 +4,7 @@
 	
 	var reg = /\.[0]+$/;
 	if(reg.test(num)){	
-		num = parseFloat(num).toFixed(1);
+		num = parseFloat(num).toFixed(0);
 	}
 	return num;
   }
@@ -33,7 +33,7 @@ function thousands_separators(num) {
 
 	part_int = deal_int(part_int);
 	
-	num = part_int + part_float?"."+part_float:"";
+	num = part_int + (part_float?"."+part_float:"");
 
 	return num;
 }
